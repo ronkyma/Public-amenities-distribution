@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+# Sample data for public amenity distribution
+amenities = ['Parks', 'Schools', 'Hospitals', 'Shopping Centers']
+percentage_distribution = [20, 30, 25, 25]
+
+# Exploding the 'Schools' section for emphasis
+explode = (0, 0.1, 0, 0)
+
+# Plotting the pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(percentage_distribution, labels=amenities, autopct='%1.1f%%', startangle=140, explode=explode, shadow=True)
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.title('Distribution of Public Amenities in Urban City')
+
+# Display the plot
+plt.show()
